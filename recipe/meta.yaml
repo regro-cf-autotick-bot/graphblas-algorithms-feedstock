@@ -31,6 +31,7 @@ test:
   requires:
     - pip
     - pytest
+    - networkx
 
 about:
   home: https://github.com/python-graphblas/graphblas-algorithms

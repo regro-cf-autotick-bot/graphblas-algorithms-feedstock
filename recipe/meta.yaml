@@ -27,11 +27,11 @@ test:
     - graphblas_algorithms
   commands:
     - pip check
-    - pytest -v --pyargs graphblas_algorithms
+    # - pytest -v --pyargs graphblas_algorithms
   requires:
     - pip
-    - pytest
-    - networkx
+    # - pytest
+    # - networkx >=3.0
 
 about:
   home: https://github.com/python-graphblas/graphblas-algorithms

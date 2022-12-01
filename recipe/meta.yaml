@@ -1,5 +1,5 @@
 {% set name = "graphblas-algorithms" %}
-{% set version = "2022.11.0" %}
+{% set version = "2022.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/graphblas-algorithms-{{ version }}.tar.gz
-  sha256: 3091bcb4b4b7705a244b5a73537d9bec377c791117e9c5f04ae9cb60d27c585b
+  sha256: fc663f523fbee949336fad2041e2f7261997c29cf8f7cbed7bd0cc8dbbb663e7
 
 build:
   noarch: python

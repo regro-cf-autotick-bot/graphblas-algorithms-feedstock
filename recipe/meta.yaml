@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/graphblas-algorithms-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/graphblas-algorithms-{{ version }}.tar.gz
   sha256: 059be9faaef2697a1d29e4fd50ae11a6ee6d91bb6c1c341f6138121aca4b40f4
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=64
     - setuptools-git-versioning
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - python-graphblas >=2023.1.0
 
 test:
@@ -34,6 +34,7 @@ test:
     - pip
     # - pytest
     # - networkx >=3.0
+    - python {{ python_min }}
 
 about:
   home: https://github.com/python-graphblas/graphblas-algorithms
